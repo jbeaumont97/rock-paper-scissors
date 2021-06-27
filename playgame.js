@@ -35,13 +35,23 @@ function game()
         }
     });
 
+    let winner = "";
+    if(playerWins > computerWins)
+    {
+        winner = "Player";
+    }
+    else if(computerWins > playerWins)
+    {
+        winner = "Computer";
+    }
+    else
+    {
+        winner = "Tie";
+    }
+
     console.log("Player-Computer-Ties " + playerWins + "-" + computerWins + "-" + ties);
 
-
-    //for debug
-    prompt();
-
-    return listOfResults;
+    return winner;
 }
 
 function getValidInput()
